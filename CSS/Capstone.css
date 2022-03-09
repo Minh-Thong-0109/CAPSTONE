@@ -1,0 +1,41 @@
+/* ALL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  /* All */
+  * {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* All */
+  * {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 2vw;
+  }
+}
