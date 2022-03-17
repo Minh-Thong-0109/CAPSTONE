@@ -147,6 +147,24 @@
   transition: 0.3s ease-out;
   text-decoration: none;
 }
+
+/* Major */
+.box__1{
+  background-color: #037ef3;
+  padding: 50px 35px;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+}
+.box__1 i{
+  text-align: center;
+  display: block;
+  color: white;
+  padding-bottom: 10px;
+  font-size: 45px;
+
+}
+/* Major */
 /*  */
 ul {
   list-style-type: none;
