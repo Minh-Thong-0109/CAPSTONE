@@ -29,7 +29,139 @@
 </head>
 
 <body>
-    <br><br><br><br><br><br>
+<!----------------------------------------------------------->
+    <!----------------------------------------------------------->
+    <!-- SWITCH WRAPPER -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div id="light">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div id="dark">
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
+    </div>
+    <div id="right__bar">
+        <div class="btn__bar">
+            <i class="fas fa-angle-double-right"></i>
+            <div class="bd__bt">
+            </div>
+            <a href="">
+                <i class="fa fa-arrow-left"></i>
+                <span class="text">Back</span>
+            </a>
+            <a href="">
+                <i class="fa fa-download"></i>
+                <span class="text">Download</span>
+
+            </a>
+            <a href="">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="text">Buy</span>
+
+            </a>
+        </div>
+    </div>
+    <section id="header">
+        <div class="container-fluid">
+            <div class="topheader d-flex align-items-center justify-content-between">
+                <div class="topheader__left">
+                    <ul class="d-flex">
+                        <li>
+                            <a href="">Have any question ?</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <a href="">+1(21) 234 4567</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href="">mail@example.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topheader__right">
+                    <ul class="d-flex">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-linkedin-in"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="header__menu">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg logo">
+                <!-- Brand or Logo -->
+                <h1>
+                    <a class="navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1"> Studious</a>
+                </h1>
+
+
+                <!-- Links -->
+                <!-- <nav class="navbar navbar-expand-lg"> -->
+                <ul class="navbar-nav flex-row menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">COURSES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="input__search">
+                    <input type="search" placeholder="Enter Keyword">
+                </div>
+                <button type="submit" class="btn__search">
+                    <i style="color: #0d369f" class="fa fa-search"></i>
+                </button>
+            </nav>
+            </nav>
+        </div>
+    </section>
+    <section id="carousel__banner">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <img src="./Img/banner2.jpg" alt="Los Angeles" width="1100" height="500">
+                    <h5>Master the <br> Skills to Drive <br> your Career</h5>
+                    <a href="">Know More
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="carousel-item ">
+                    <img src="./Img/banner3.jpg" alt="Chicago" width="1100" height="500">
+                    <h5>Studious is the <br> best choice for <br>everyone</h5>
+                    <a href="">Know More
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+    </section>
+    <section id="major">
+
+    </section>
     <!----------------------------------------------------------->
     <!-- WELCOME -->
     <section id="welcome">
@@ -674,7 +806,32 @@
                 }
 
                 window.addEventListener("scroll", onScrollHandler);
-
+            </script>
+            <!----------------------------------------------------------->
+            <!-- Background color -->
+            <script>
+                const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                const currentTheme = localStorage.getItem('theme');
+                if (currentTheme) {
+                    document.documentElement.setAttribute('data-theme', currentTheme);
+                    if (currentTheme === 'dark') {
+                        toggleSwitch.checked = true;
+                    }
+                }
+                function switchTheme(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        document.getElementById('dark').style.display='none';
+                        document.getElementById('light').style.display='block';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        document.getElementById('dark').style.display='block';
+                        document.getElementById('light').style.display='none';
+                    }
+                }
+                toggleSwitch.addEventListener('change', switchTheme);
             </script>
         </div>
     </div>
