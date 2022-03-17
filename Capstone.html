@@ -29,41 +29,31 @@
 </head>
 
 <body>
-<!----------------------------------------------------------->
     <!----------------------------------------------------------->
-    <!-- SWITCH WRAPPER -->
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div id="light">
-                <i class="fas fa-sun"></i>
+    <!-- FAST CLICK -->
+    <section id="fastclick">
+        <div id="right__bar">
+            <div class="btn__bar">
+                <i class="fas fa-angle-double-right"></i>
+                <div class="bd__bt">
+                </div>
+                <a href="">
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="text">Back</span>
+                </a>
+                <a href="">
+                    <i class="fa fa-download"></i>
+                    <span class="text">Download</span>
+                </a>
+                <a href="">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="text">Buy</span>
+                </a>
             </div>
-            <div id="dark">
-                <i class="fas fa-moon"></i>
-            </div>
-        </label>
-    </div>
-    <div id="right__bar">
-        <div class="btn__bar">
-            <i class="fas fa-angle-double-right"></i>
-            <div class="bd__bt">
-            </div>
-            <a href="">
-                <i class="fa fa-arrow-left"></i>
-                <span class="text">Back</span>
-            </a>
-            <a href="">
-                <i class="fa fa-download"></i>
-                <span class="text">Download</span>
-
-            </a>
-            <a href="">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="text">Buy</span>
-
-            </a>
         </div>
-    </div>
+    </section>
+    <!----------------------------------------------------------->
+    <!-- HEADER -->
     <section id="header">
         <div class="container-fluid">
             <div class="topheader d-flex align-items-center justify-content-between">
@@ -93,6 +83,8 @@
             </div>
         </div>
     </section>
+    <!----------------------------------------------------------->
+    <!-- HEADER MENU -->
     <section id="header__menu">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg logo">
@@ -100,7 +92,6 @@
                 <h1>
                     <a class="navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1"> Studious</a>
                 </h1>
-
 
                 <!-- Links -->
                 <!-- <nav class="navbar navbar-expand-lg"> -->
@@ -131,6 +122,21 @@
             </nav>
         </div>
     </section>
+    <!----------------------------------------------------------->
+    <!-- SWITCH WRAPPER -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div id="light">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div id="dark">
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
+    </div>
+    <!----------------------------------------------------------->
+    <!-- CAROUSEL -->
     <section id="carousel__banner">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -159,6 +165,8 @@
                 </div>
             </div>
     </section>
+    <!----------------------------------------------------------->
+    <!-- MAJOR -->
     <section id="major">
 
     </section>
@@ -822,13 +830,13 @@
                     if (e.target.checked) {
                         document.documentElement.setAttribute('data-theme', 'dark');
                         localStorage.setItem('theme', 'dark');
-                        document.getElementById('dark').style.display='none';
-                        document.getElementById('light').style.display='block';
+                        document.getElementById('dark').style.display = 'none';
+                        document.getElementById('light').style.display = 'block';
                     } else {
                         document.documentElement.setAttribute('data-theme', 'light');
                         localStorage.setItem('theme', 'light');
-                        document.getElementById('dark').style.display='block';
-                        document.getElementById('light').style.display='none';
+                        document.getElementById('dark').style.display = 'block';
+                        document.getElementById('light').style.display = 'none';
                     }
                 }
                 toggleSwitch.addEventListener('change', switchTheme);
