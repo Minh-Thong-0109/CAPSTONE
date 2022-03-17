@@ -7,6 +7,147 @@
   font-size: 1vw;
 }
 
+/* right__bar */
+#right__bar{
+  width: 90px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    right: 0px;
+    top: 0;
+    margin-top: 60px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    overflow-y: auto;
+}
+.btn__bar{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 40px 5px;
+  padding-top: 10px;
+  margin-bottom: 70px;
+  background: #0D1326;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+.bd__bt{
+  border-bottom: 1px solid white;
+}
+.btn__bar i{
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.btn__bar span{
+  text-align: center;
+  display: block;
+}
+/* right__bar */
+/* header */
+.topheader__left a{
+  color: white;
+}
+#header{
+  padding: 14px 15px;
+  background-color: #0d369f;
+}
+
+.topheader__left li {
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.topheader__left a{
+  color: white;
+  transition: 0.25s ease-out;
+}
+.topheader__left a:hover{
+  color: #ff6e65;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+.topheader__right i:hover{
+  color: #ff6e65;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+.topheader__right i{
+  padding-left: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+/* header__menu */
+.logo h1 a{
+  color: #0d369f;
+  font-size: 25px;
+  font-weight: 600;
+}
+.menu li{
+  padding-left: 10px;
+}
+.menu a{
+  color: black;
+  font-weight: 600;
+}
+.menu a:hover{
+  color: #ff6e65;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+.input__search input{
+  border-radius: 30px;
+  border: 2px solid #eee;
+  padding: 10px 20px;
+}
+.btn__search{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+/* banner */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner h5{
+  font-size: 50px;
+    line-height: 80px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.carousel-item{
+  position: relative;
+}
+.carousel-item a{
+  padding: 14px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #060606;
+  border-radius: 4px;
+  background: white;
+  border: none;
+  transition: all .25s ease-in-out;
+  position: absolute;
+    right: 530px;
+    bottom: 80px;
+}
+.carousel-item a:hover{
+  color: white;
+  background: #ff6e65;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+}
+/*  */
 ul {
   list-style-type: none;
 }
