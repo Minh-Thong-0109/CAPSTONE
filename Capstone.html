@@ -82,7 +82,6 @@
     <section id="header__menu">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg logo">
-                <!-- Brand or Logo -->
                 <h1>
                     <a class="navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1"> Studious</a>
                 </h1>
@@ -90,7 +89,7 @@
 
                 <!-- Links -->
                 <!-- <nav class="navbar navbar-expand-lg"> -->
-                <ul class="navbar-nav flex-row menu">
+                <!-- <ul class="navbar-nav flex-row menu">
                     <li class="nav-item">
                         <a class="nav-link" href="#">HOME</a>
                     </li>
@@ -111,9 +110,48 @@
                     <input type="search" placeholder="Enter Keyword">
                 </div>
                 <button type="submit" class="btn__search">
-                    <i style="color: #0d369f" class="fa fa-search"></i>
+                    <i style="color: #0d369f" class="search__btn fa fa-search"></i>
                 </button>
-            </nav>
+            </nav> -->
+
+            <!--  -->
+            <nav class=" navbar navbar-expand-lg ml-lg-auto mr-lg-5 ">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#"></a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler btn__menu" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PAGES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT US</a>
+                        </li>
+                        <div class="input__search">
+                            <input type="search" placeholder="Enter Keyword">
+                            <button type="submit" class="btn__search">
+                                <i style="color: #0d369f" class="search__btn fa fa-search"></i>
+                            </button>
+                        </div>
+                        
+                    </ul>
+                    
+                </div>
             </nav>
         </div>
     </section>
@@ -122,19 +160,21 @@
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <!-- <li data-target="#demo" data-slide-to="0" class="active"></li>
                 <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="2"></li> -->
             </ul>
 
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active ">
                     <img src="./Img/banner2.jpg" alt="Los Angeles" width="1100" height="500">
+                    <div class="contain__info">
                     <h5>Master the <br> Skills to Drive <br> your Career</h5>
                     <a href="">Know More
                         <i class="fa fa-arrow-right ml-2"></i>
                     </a>
+                    </div>
                 </div>
                 <div class="carousel-item ">
                     <img src="./Img/banner3.jpg" alt="Chicago" width="1100" height="500">
@@ -146,22 +186,24 @@
             </div>
     </section>
     <section id="major">
-        <div class="d-flex  ">
-            <div class="box__1">
-                <i class="fa fa-cogs"></i>
-                <h4>Engineering & Architecture</h4>
-            </div>
-            <div class="box__2">
-                <i class="fa fa-book"></i>
-                <h4>Learning Management</h4>
-            </div>
-            <div class="box__3">
-                <i class="fa fa-coffee"></i>
-                <h4>Engineering & Architecture</h4>
-            </div>
-            <div class="box__4">
-                <i class="fa fa-cogs"></i>
-                <h4>Engineering & Architecture</h4>
+        <div class="container">
+            <div class="d-flex justify-content-around cover">
+                <div class="box">
+                    <i class="fa fa-cogs"></i>
+                    <h4>Engineering & <br> Architecture</h4>
+                </div>
+                <div class="box">
+                    <i class="fa fa-book"></i>
+                    <h4>Learning <br>Management</h4>
+                </div>
+                <div class="box">
+                    <i class="fa fa-coffee"></i>
+                    <h4>Business & <br> Management</h4>
+                </div>
+                <div class="box">
+                    <i class="fa fa-hourglass-half"></i>
+                    <h4>Artificial <br> Intelligence</h4>
+                </div>
             </div>
         </div>
     </section>

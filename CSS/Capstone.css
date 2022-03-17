@@ -94,6 +94,12 @@
   color: black;
   font-weight: 600;
 }
+.btn__menu{
+  background-color: #0d369f;
+  line-height: 34px;
+  color: #fff;
+  font-size: 20px;
+}
 .menu a:hover{
   color: #ff6e65;
   transition: 0.3s ease-out;
@@ -111,10 +117,16 @@
   background-color: transparent;
   border: 1px solid transparent;
 }
+.search__btn{
+  /* padding-right: 115px; */
+    /* padding-top: 10px; */
+    position: absolute;
+    left: -25px;
+}
 /* banner */
 .carousel-inner img {
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 .carousel-inner h5{
   font-size: 50px;
@@ -123,7 +135,7 @@
     color: white;
     position: absolute;
     top: 10px;
-    left: 30px;
+    left: 430px;
 }
 .carousel-item{
   position: relative;
@@ -138,8 +150,8 @@
   border: none;
   transition: all .25s ease-in-out;
   position: absolute;
-    right: 530px;
-    bottom: 80px;
+  left: 410px;
+  bottom: 50px;
 }
 .carousel-item a:hover{
   color: white;
@@ -147,22 +159,45 @@
   transition: 0.3s ease-out;
   text-decoration: none;
 }
+/* .contain__info{
+  max-width: 600px;
+} */
 
 /* Major */
-.box__1{
+.container{
+  position: relative;
+  height: 250px;
+}
+.cover{
+  position: absolute;
+  top: -40px;
+}
+.box{
   background-color: #037ef3;
   padding: 50px 35px;
     position: relative;
     z-index: 1;
     border-radius: 8px;
+    margin-left: 10px;
 }
-.box__1 i{
+.box:nth-child(2){
+  background-color:#ffc949 ;
+}
+.box:nth-child(3){
+  background-color:#ff4f81 ;
+}
+.box:nth-child(4){
+  background-color:#1ee697 ;
+}
+.box i{
   text-align: center;
   display: block;
   color: white;
   padding-bottom: 10px;
   font-size: 45px;
-
+}
+.box h4{
+  color: white;
 }
 /* Major */
 /*  */
@@ -1112,7 +1147,21 @@ span {
   * {
     font-size: 1.5vw;
   }
-
+/* header */
+#header{
+  display: none;
+}
+.navbar-toggler-icon{
+  font-size: 20px;
+  line-height: 34px;
+  color: #fff;
+}
+.search__btn{
+  position: absolute;
+  left: -80px;
+  top: 222px;
+}
+/*  */
   /* ===================== */
   /* Course */
 
@@ -1216,6 +1265,7 @@ span {
   * {
     font-size: 2vw;
   }
+ 
 
   /* ===================== */
   /* Course */
