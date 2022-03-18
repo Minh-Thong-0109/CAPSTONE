@@ -91,16 +91,15 @@
     </section>
     <!----------------------------------------------------------->
     <!-- HEADER MENU -->
-    <section id="header__menu">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg logo">
-                <!-- Brand or Logo -->
-                <h1>
-                    <a class="navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1"> Studious</a>
-                </h1>
+    <header>
+        <nav id="header__menu" class="header__menu navbar navbar-expand-md">
+            <!-- Brand -->
+            <a class="logo col-lg-3 col-md-2 col-2 navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1">
+                <span>Studious</span></a>
 
-                <!-- Links -->
-                <ul class="navbar-nav flex-row menu">
+            <!-- Navbar links -->
+            <div class="menu col-lg-8 col-md-9 collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="nav__menu navbar-nav ml-lg-auto ">
                     <li class="nav-item">
                         <a class="nav-link" href="#">HOME</a>
                     </li>
@@ -110,47 +109,63 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">COURSES</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PAGES</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-center" href="#" id="navbardrop" data-toggle="dropdown">
+                            PAGES
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">BLOG POSTS</a>
+                            <a class="dropdown-item" href="#">BLOG SINGLE</a>
+                            <a class="dropdown-item" href="#">404 PAGE</a>
+                            <a class="dropdown-item" href="#">EMAIL TEMPLATE</a>
+                            <a class="dropdown-item" href="#">LANDING PAGE</a>
+                            <a class="dropdown-item" href="#">SHORTCODES</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">CONTACT US</a>
                     </li>
+                    <div class="input__search">
+                        <input type="search" placeholder="Enter Keyword">
+                        <button type="submit" class="btn__search">
+                            <i class="search__btn fa fa-search"></i>
+                        </button>
+                    </div>
                 </ul>
-                <div class="input__search">
-                    <input type="search" placeholder="Enter Keyword">
-                </div>
-                <button type="submit" class="btn__search">
-                    <i style="color: #0d369f" class="fa fa-search"></i>
-                </button>
-            </nav>
-            </nav>
-        </div>
-    </section>
+            </div>
+            <!-- SWITCH WRAPPER -->
+            <div class="theme-switch-wrapper col-1">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div id="light">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div id="dark">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
+            <!-- Toggler/collapsibe Button -->
+            <button id="btn-toggler" class="navbar-toggler btn-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavbar">
+                <span class="btn-toggler-icon navbar-toggler-icon fa icon-expand fa-bars"></span>
+            </button>
+        </nav>
+    </header>
     <!----------------------------------------------------------->
-    <!-- SWITCH WRAPPER -->
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div id="light">
-                <i class="fas fa-sun"></i>
-            </div>
-            <div id="dark">
-                <i class="fas fa-moon"></i>
-            </div>
-        </label>
-    </div>
+
     <!----------------------------------------------------------->
     <!-- CAROUSEL -->
     <section id="carousel__banner">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
+            <div class="carousel__indicators">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                </ul>
+            </div>
 
             <!-- The slideshow -->
             <div class="carousel-inner">
@@ -169,6 +184,7 @@
                     </a>
                 </div>
             </div>
+        </div>
     </section>
     <!----------------------------------------------------------->
     <!-- MAJOR -->
@@ -810,21 +826,23 @@
                 const header = document.querySelector("header");
                 function onScrollHandler(event) {
                     if (window.scrollY > 0) {
-                        header.style.backgroundColor = "rgba(255,255,255,1)"
-                        header.style.padding = "0 0";
                         header.style.position = "fixed";
                         header.style.width = "100%";
                         header.style.zIndex = "100";
-                    }
-                    else {
-                        header.style.position = "absolute";
-                        header.style.padding = "2rem 0";
-                        header.style.backgroundColor = "rgba(255,255,255,0)"
+                        header.style.top = "0";
+                        document.getElementById("header__menu").style.padding = "0.5rem 2rem";
+                    } else {
+                        header.style.position = null;
+                        header.style.width = null;
+                        header.style.zIndex = null;
+                        header.style.top = null;
+                        document.getElementById("header__menu").style.padding = null;
                     }
                 }
 
                 window.addEventListener("scroll", onScrollHandler);
             </script>
+
             <!----------------------------------------------------------->
             <!-- Background color -->
             <script>
