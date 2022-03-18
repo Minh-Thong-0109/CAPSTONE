@@ -1,3 +1,4 @@
+
 /* ALL */
 * {
   margin: 0;
@@ -176,10 +177,12 @@
   margin-top: -4rem;
     position: relative;
 }
+.cover{
 /* .cover{
   position: absolute;
   top: -40px;
 } */
+}
 .slider__info{
   background: url(../Img/banner2.jpg) no-repeat top right;
   background-size: cover;
