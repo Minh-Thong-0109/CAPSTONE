@@ -50,6 +50,7 @@ body {
   right: 0;
   top: 10%;
   overflow-y: auto;
+  overflow: hidden;
   background-color: rgba(16, 21, 34, 1);
   border-radius: 0.7rem 0 0 0.7rem;
 }
@@ -101,22 +102,17 @@ body {
   vertical-align: middle;
 }
 
-.topheader__left__list,
-.topheader__right__list {
-  padding-top: 0.7rem;
-}
-
-.topheader__left__list{
+.topheader__left__list {
   align-items: left;
 }
 
-.topheader__right__list{
+.topheader__right__list {
   justify-content: space-around;
 }
 
 .topheader__left li {
   font-weight: 500;
-  padding: 0 3rem 0 0;
+  padding: 0.8rem 3rem 0 0;
 }
 
 .topheader__left a {
@@ -132,7 +128,7 @@ body {
 }
 
 .topheader__right i {
-  padding-top: 0.7rem;
+  padding-top: 0.9rem;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -1015,6 +1011,10 @@ body {
   width: 100%;
 }
 
+.contact__img img {
+  width: 100%;
+}
+
 .contact__content {
   padding: 5rem 2rem;
 }
@@ -1735,6 +1735,42 @@ span {
 }
 
 /* ===================== */
+/* Back to top */
+
+.backtotop {
+  display: block;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.backtotop i {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  line-height: 4rem;
+  text-align: center;
+  background-color: var(--color-icon);
+}
+
+/* Back to top button action */
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 0;
+}
+
+.cd-top--fade-out {
+  opacity: 1;
+}
+
+/* ===================== */
 /* Media screen */
 
 @media screen and (max-width: 992px) {
@@ -1742,6 +1778,30 @@ span {
 
   * {
     font-size: 1.5vw;
+  }
+
+  /* ===================== */
+  /* Fast click */
+
+  .btn__bar {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .bd__bt {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .bd__bt i,
+  .bd__bt span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ===================== */
+  /* Header */
+
+  #header {
+    display: none;
   }
 
   /* ===================== */
@@ -1761,6 +1821,10 @@ span {
 
   /* ===================== */
   /* Classes */
+
+  #classes {
+    height: 100%;
+  }
 
   .classes__icon i {
     transform: translateY(10%);
@@ -1809,7 +1873,8 @@ span {
 
   .instructor__item {
     width: 45%;
-    margin: 1rem 2.5%;
+    margin: 2rem 2.5%;
+    box-shadow: rgba(4, 20, 69, 0.1) 0rem 1rem 1rem 0rem;
   }
 
   /* ===================== */
@@ -1909,7 +1974,8 @@ span {
 
   .instructor__item {
     width: 45%;
-    margin: 0.5rem 2.5%;
+    margin: 1.5rem 2.5%;
+    box-shadow: rgba(4, 20, 69, 0.1) 0rem 1rem 1rem 0rem;
   }
 }
 
@@ -2011,7 +2077,8 @@ span {
 
   .instructor__item {
     width: 100%;
-    margin: 0.5rem 0;
+    margin: 2rem 2.5%;
+    box-shadow: rgba(4, 20, 69, 0.1) 0rem 1rem 1rem 0rem;
   }
 
   /* ===================== */
