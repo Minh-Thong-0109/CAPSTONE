@@ -30,37 +30,47 @@
 </head>
 
 <body>
-    <div id="right__bar">
-        <div class="btn__bar">
-            <i class="fas fa-angle-double-right"></i>
-            <div class="bd__bt">
+    <!----------------------------------------------------------->
+    <!-- FAST CLICK -->
+    <section id="fastclick">
+        <div id="right__bar">
+            <div class="btn__bar">
+                <div class="bd__bt">
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+                <div class="bd__bt">
+                    <a href="">
+                        <i class="fa fa-arrow-left"></i>
+                        <span class="text">Back</span>
+                    </a>
+                </div>
+                <div class="bd__bt">
+                    <a href="">
+                        <i class="fa fa-download"></i>
+                        <span class="text">Download</span>
+                    </a>
+                </div>
+                <div class="bd__bt">
+                    <a href="">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="text">Buy</span>
+                    </a>
+                </div>
             </div>
-            <a href="">
-                <i class="fa fa-arrow-left"></i>
-                <span class="text">Back</span>
-            </a>
-            <a href="">
-                <i class="fa fa-download"></i>
-                <span class="text">Download</span>
-
-            </a>
-            <a href="">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="text">Buy</span>
-
-            </a>
         </div>
-    </div>
+    </section>
+    <!----------------------------------------------------------->
+    <!-- HEADER -->
     <section id="header">
-        <div class="container-fluid">
-            <div class="topheader d-flex align-items-center justify-content-between">
-                <div class="topheader__left">
-                    <ul class="d-flex">
+        <div class="container">
+            <div class="topheader row">
+                <div class="topheader__left col-lg-10">
+                    <ul class="topheader__left__list row">
                         <li>
                             <a href="">Have any question ?</a>
                         </li>
                         <li>
-                            <i class="fa fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                             <a href="">+1(21) 234 4567</a>
                         </li>
                         <li>
@@ -69,8 +79,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="topheader__right">
-                    <ul class="d-flex">
+                <div class="topheader__right col-lg-2">
+                    <ul class="topheader__right__list row">
                         <li><i class="fab fa-facebook-f"></i></li>
                         <li><i class="fab fa-twitter"></i></li>
                         <li><i class="fab fa-instagram"></i></li>
@@ -80,6 +90,8 @@
             </div>
         </div>
     </section>
+    <!----------------------------------------------------------->
+    <!-- HEADER MENU -->
     <section id="header__menu">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg logo">
@@ -93,10 +105,10 @@
                 </button>
 
 
-
                 <!-- Links -->
                 <!-- <nav class="navbar navbar-expand-lg"> -->
                 <!-- <ul class="navbar-nav flex-row menu">
+                <ul class="navbar-nav flex-row menu">
                     <li class="nav-item">
                         <a class="nav-link" href="#">HOME</a>
                     </li>
@@ -171,6 +183,21 @@
                 </nav>
         </div>
     </section>
+    <!----------------------------------------------------------->
+    <!-- SWITCH WRAPPER -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div id="light">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div id="dark">
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
+    </div>
+    <!----------------------------------------------------------->
+    <!-- CAROUSEL -->
     <section id="carousel__banner">
         <!-- <div class="containerádasd"> -->
         <div id="demo" class="carousel slide" data-ride="carousel">
@@ -267,7 +294,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </section>
+    <!----------------------------------------------------------->
+    <!-- MAJOR -->
+    <section id="major">
+
     </section>
     <!----------------------------------------------------------->
     <!-- WELCOME -->
@@ -859,6 +890,11 @@
         </div>
     </footer>
     <!----------------------------------------------------------->
+    <!-- BACK TO TOP BUTTON -->
+    <a class="backtotop cd-top text-replace js-cd-top" href="#">
+        <i class="fas fa-level-up-alt"></i>
+    </a>
+    <!----------------------------------------------------------->
     <!-- Lib & JS -->
     <div>
         <!-- Lib -->
@@ -913,7 +949,32 @@
                 }
 
                 window.addEventListener("scroll", onScrollHandler);
-
+            </script>
+            <!----------------------------------------------------------->
+            <!-- Background color -->
+            <script>
+                const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                const currentTheme = localStorage.getItem('theme');
+                if (currentTheme) {
+                    document.documentElement.setAttribute('data-theme', currentTheme);
+                    if (currentTheme === 'dark') {
+                        toggleSwitch.checked = true;
+                    }
+                }
+                function switchTheme(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        document.getElementById('dark').style.display = 'none';
+                        document.getElementById('light').style.display = 'block';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        document.getElementById('dark').style.display = 'block';
+                        document.getElementById('light').style.display = 'none';
+                    }
+                }
+                toggleSwitch.addEventListener('change', switchTheme);
             </script>
         </div>
     </div>
