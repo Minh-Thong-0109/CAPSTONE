@@ -140,6 +140,11 @@
 .carousel-item{
   position: relative;
 }
+.cover{
+  height: 500px;
+    position: absolute;
+    width: 100%;
+}
 .carousel-item a{
   padding: 14px 30px;
   font-weight: 600;
@@ -151,7 +156,7 @@
   transition: all .25s ease-in-out;
   position: absolute;
   left: 410px;
-  bottom: 50px;
+  bottom: 95px;
 }
 .carousel-item a:hover{
   color: white;
@@ -164,29 +169,31 @@
 } */
 
 /* Major */
-.container{
-  position: relative;
-  height: 250px;
+#major{
+  margin-top: -4rem;
+    position: relative;
 }
 .cover{
   position: absolute;
   top: -40px;
 }
 .box{
-  background-color: #037ef3;
   padding: 50px 35px;
     position: relative;
     z-index: 1;
     border-radius: 8px;
     margin-left: 10px;
 }
-.box:nth-child(2){
+.color_1{
+  background-color: #037ef3;
+}
+.color_2{
   background-color:#ffc949 ;
 }
-.box:nth-child(3){
+.color_3{
   background-color:#ff4f81 ;
 }
-.box:nth-child(4){
+.color_4{
   background-color:#1ee697 ;
 }
 .box i{
@@ -198,6 +205,17 @@
 }
 .box h4{
   color: white;
+}
+.box h4:hover{
+  color: black;
+  transition: 0.5s ease-out;
+}
+
+.grids__box{
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 /* Major */
 /*  */
@@ -1161,6 +1179,31 @@ span {
   left: -80px;
   top: 222px;
 }
+.navbar__collapse{
+  flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+} 
+.nav__menu{
+  align-items: center;
+}
+
+.input__search{
+  position: relative;
+}
+.input__search i{
+  position: absolute;
+    top: -15px;
+    left: 0px;
+}
+/*  */
+/* Major */
+/* .grids__box{
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+} */
 /*  */
   /* ===================== */
   /* Course */
