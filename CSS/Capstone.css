@@ -202,6 +202,10 @@ body {
   transition: 0.3s ease-out;
 }
 
+.menu li a.active{
+  color: rgba(255, 110, 101, 1);
+}
+
 .input__search {
   position: relative;
   margin: 0 0.5rem;
