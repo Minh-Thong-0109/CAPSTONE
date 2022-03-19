@@ -97,6 +97,23 @@
             <a id="brand" class="logo col-lg-3 col-md-2 col-2 navbar-brand" href=""><img src="./Img/logo.png" alt=""
                     class="mr-1">
                 <span>Studious</span></a>
+            <!-- Toggler/collapsibe Button -->
+            <button id="btn-toggler" class="navbar-toggler btn-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavbar">
+                <span id="btn-toggler-icon" class="btn-toggler-icon navbar-toggler-icon fa icon-expand fa-bars"></span>
+            </button>
+            <!-- SWITCH WRAPPER -->
+            <div id="switch" class="theme-switch-wrapper col-1">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div id="light">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div id="dark">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
             <!-- Navbar links -->
             <div class="menu col-lg-8 col-md-9 collapse navbar-collapse" id="collapsibleNavbar">
                 <ul id="menu" class="nav__menu navbar-nav ml-lg-auto ">
@@ -133,23 +150,6 @@
                     </div>
                 </ul>
             </div>
-            <!-- SWITCH WRAPPER -->
-            <div id="switch" class="theme-switch-wrapper col-1">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div id="light">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div id="dark">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                </label>
-            </div>
-            <!-- Toggler/collapsibe Button -->
-            <button id="btn-toggler" class="navbar-toggler btn-toggler" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar">
-                <span class="btn-toggler-icon navbar-toggler-icon fa icon-expand fa-bars"></span>
-            </button>
         </nav>
     </header>
     <!----------------------------------------------------------->
@@ -866,6 +866,15 @@
                 }
 
                 window.addEventListener("scroll", onScrollHandler);
+            </script>
+
+            <!----------------------------------------------------------->
+            <!-- Toggle -->
+            <script>
+                document.getElementById("btn-toggler").addEventListener("click", event => {
+                    document.getElementById("btn-toggler-icon").classList.toggle("fa-window-close");
+                    document.getElementById("btn-toggler").classList.toggle("btn-toggler");
+                });
             </script>
 
             <!----------------------------------------------------------->

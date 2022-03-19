@@ -2,7 +2,7 @@
 /* Theme */
 
 :root {
-  --color-bg: rgba(255, 255, 255, 1);
+  --color-bg: rgb(255, 255, 255, 1);
   --color-bg-item: rgba(235, 235, 235, 1);
   --color-text: rgba(6, 14, 31, 1);
   --color-icon: rgba(13, 54, 159, 1);
@@ -52,7 +52,7 @@ body {
   position: fixed;
   z-index: 3;
   right: 0;
-  top: 10%;
+  top: 12%;
   overflow-y: auto;
   overflow: hidden;
   background-color: rgba(16, 21, 34, 1);
@@ -149,6 +149,8 @@ body {
 
 #header__menu {
   padding: 1rem 2rem;
+  box-shadow: var(--color-icon-bg) 0rem 0.2rem 1rem 0rem;
+  position: relative;
 }
 
 .logo a {
@@ -174,6 +176,10 @@ body {
 /* ===================== */
 /* Toggler */
 
+.navbar-toggler{
+  padding: 0;
+}
+
 .btn-toggler {
   background-color: var(--color-menu-icon);
   padding: 0.5rem;
@@ -182,6 +188,7 @@ body {
 .btn-toggler-icon {
   color: rgba(255, 255, 255, 1);
   line-height: 1.8rem;
+  height: fit-content;
 }
 
 /* ===================== */
@@ -266,6 +273,8 @@ body {
   margin-top: 0.25rem;
   text-align: right;
   z-index: 5;
+  position: absolute;
+  right: 3%;
 }
 
 .theme-switch {
@@ -2266,6 +2275,17 @@ span {
   /* ===================== */
   /* Header menu */
 
+  #header__menu{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu ul{
+    border: 0.1rem solid var(--color-icon-bg);
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
   .menu li {
     padding: 0.5rem;
     margin: 0 auto;
@@ -2291,9 +2311,24 @@ span {
   /* Switch Wrapper */
 
   .theme-switch-wrapper {
-    margin-left: auto;
     margin-right: 2rem;
     padding-top: 0.5rem;
+    right: 10%;
+    top: 1rem;
+  }
+
+  #btn-toggler{
+    margin-left: auto;
+  }
+
+  #light, #dark {
+    margin-right: 5rem;
+  }
+  
+  .fa-window-close{
+    color: rgba(245, 37, 22, 1);
+    font-size: 2.2rem;
+    margin-left: auto;
   }
 
   /* ===================== */
