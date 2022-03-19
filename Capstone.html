@@ -61,7 +61,7 @@
     <!----------------------------------------------------------->
     <!-- HEADER -->
     <section id="header">
-        <div class="container">
+        <div>
             <div class="topheader row">
                 <div class="topheader__left col-lg-10">
                     <ul class="topheader__left__list row">
@@ -94,12 +94,12 @@
     <header>
         <nav id="header__menu" class="header__menu navbar navbar-expand-md">
             <!-- Brand -->
-            <a class="logo col-lg-3 col-md-2 col-2 navbar-brand" href=""><img src="./Img/logo.png" alt="" class="mr-1">
+            <a id="brand" class="logo col-lg-3 col-md-2 col-2 navbar-brand" href=""><img src="./Img/logo.png" alt=""
+                    class="mr-1">
                 <span>Studious</span></a>
-
             <!-- Navbar links -->
             <div class="menu col-lg-8 col-md-9 collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="nav__menu navbar-nav ml-lg-auto ">
+                <ul id="menu" class="nav__menu navbar-nav ml-lg-auto ">
                     <li class="nav-item">
                         <a class="nav-link" href="#">HOME</a>
                     </li>
@@ -125,7 +125,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">CONTACT US</a>
                     </li>
-                    <div class="input__search">
+                    <div id="search" class="input__search">
                         <input type="search" placeholder="Enter Keyword">
                         <button type="submit" class="btn__search">
                             <i class="search__btn fa fa-search"></i>
@@ -134,7 +134,7 @@
                 </ul>
             </div>
             <!-- SWITCH WRAPPER -->
-            <div class="theme-switch-wrapper col-1">
+            <div id="switch" class="theme-switch-wrapper col-1">
                 <label class="theme-switch" for="checkbox">
                     <input type="checkbox" id="checkbox" />
                     <div id="light">
@@ -152,8 +152,6 @@
             </button>
         </nav>
     </header>
-    <!----------------------------------------------------------->
-
     <!----------------------------------------------------------->
     <!-- CAROUSEL -->
     <section id="carousel__banner">
@@ -188,8 +186,35 @@
     </section>
     <!----------------------------------------------------------->
     <!-- MAJOR -->
-    <section id="major">
-
+    <section id="major" class=" pb-lg-5 text-center">
+        <div class="container">
+            <div class="grids__box row">
+                <div class="col-lg-3 col-md-6 px-lg-2">
+                    <div class="box color_1">
+                        <i class="fa fa-cogs"></i>
+                        <h4>Engineering & <br> Architecture</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+                    <div class="box color_2">
+                        <i class="fa fa-book"></i>
+                        <h4>Learning <br>Management</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">
+                    <div class="box color_3">
+                        <i class="fa fa-coffee"></i>
+                        <h4>Business & <br> Management</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">
+                    <div class="box color_4">
+                        <i class="fa fa-hourglass-half"></i>
+                        <h4>Artificial <br> Intelligence</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!----------------------------------------------------------->
     <!-- WELCOME -->
@@ -830,7 +855,7 @@
                         header.style.width = "100%";
                         header.style.zIndex = "100";
                         header.style.top = "0";
-                        document.getElementById("header__menu").style.padding = "0.5rem 2rem";
+                        document.getElementById("header__menu").style.padding = "0.8rem 2rem";
                     } else {
                         header.style.position = null;
                         header.style.width = null;
