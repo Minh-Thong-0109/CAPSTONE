@@ -2569,3 +2569,14 @@ span {
     padding: 10rem 1rem 0 1rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+    /* ===================== */
+  /* Switch Wrapper */
+
+  .theme-switch-wrapper {
+    margin-right: 5rem;
+    right: 10%;
+    top: 1.9rem;
+  }
+}
